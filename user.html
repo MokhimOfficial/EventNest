@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://assets.floodcoalition.org/2022/03/8841ebb4670e700461459f95c8676f00-IMG_0111-scaled.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Fzc2V0cy5mbG9vZGNvYWxpdGlvbi5vcmdcLzIwMjJcLzAzXC84ODQxZWJiNDY3MGU3MDA0NjE0NTlmOTVjODY3NmYwMC1JTUdfMDExMS1zY2FsZWQuanBnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYwOTE5NDgzfX19XX0_&Signature=hd3pe7hJabrXSz1w1VaKEetjD1mfczIrXZ-Ub044ThEi/WnZhy0hIi5zzUVjs6sVaN6Qsxr80-1ElnV24rpLb8fNog8E9lNxdkmHA8m2nBxtsp1DxvCQT-SXRUZbVRd3fwJHq25EQiBEgBL1wAkdpLVtCgxEAQlatxxllGhTp4jusuP8AaYQShO7fALp9toKryQ8AqdGQcXJ/lcO8BPeWkBWFv55UhXvX5ln7FSEJ1NQPgdvR5zQVaCGN17UhJSnmn5HtBYlYY83qMV62JdPAnXpNAVAG-yZOv1XTniJ7IQG82TD4kH7eR0ZoHaJmXggMGpRweKFSps5tKTxzRI7kA__&Key-Pair-Id=APKAI3SZN3YHQNRWCD2Q'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .event-form-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .event-form-container label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .event-form-container input[type="text"],
+        .event-form-container input[type="date"],
+        .event-form-container input[type="time"],
+        .event-form-container textarea,
+        .event-form-container input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .event-form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000; /* Black color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .event-form-container button:hover {
+            background-color: #333; /* Darker shade on hover */
+        }
+
+        .event-form-container .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="event-form-container">
+        <h2>Add Your Event</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" placeholder="Enter event name" required>
+
+            <label for="event-date">Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="event-time">Time:</label>
+            <input type="time" id="event-time" name="event-time" required>
+
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description" rows="5" placeholder="Describe your event..." required></textarea>
+
+            <label for="event-location">Location:</label>
+            <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
+
+            <label for="event-images">Upload Images (Max 2):</label>
+            <input type="file" id="event-images" name="event-images[]" accept="image/*" multiple required>
+
+            <button type="submit">Add Event</button>
+        </form>
+        <div class="form-footer">
+            <p>Start planning and share your event with the community!</p>
+        </div>
+    </div>
+</body>
+</html>
